@@ -18,4 +18,4 @@ spec:
         - name: javasample 
           image: desattir.azurecr.io/javasample
           ports:
-          - containerPort: 80
+          - containerPort: 8080
