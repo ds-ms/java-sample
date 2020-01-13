@@ -1,21 +1,21 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: dotnetcoresample 
+  name: javasample 
   labels:
-    app: dotnetcoresample
+    app: javasample
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: dotnetcoresample
+      app: javasample
   template:
     metadata:
       labels:
-        app: dotnetcoresample 
+        app: javasample 
     spec:
       containers:
-        - name: dotnetcoresample 
-          image: desattir.azurecr.io/dotnetcoresample
+        - name: javasample 
+          image: desattir.azurecr.io/javasample
           ports:
           - containerPort: 80
