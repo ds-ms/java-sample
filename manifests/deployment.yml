@@ -1,0 +1,21 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: dotnetcoresample 
+  labels:
+    app: dotnetcoresample
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dotnetcoresample
+  template:
+    metadata:
+      labels:
+        app: dotnetcoresample 
+    spec:
+      containers:
+        - name: dotnetcoresample 
+          image: desattir.azurecr.io/dotnetcoresample
+          ports:
+          - containerPort: 80
